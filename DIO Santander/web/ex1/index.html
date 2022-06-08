@@ -4,24 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
     <title>Exemplo 1</title>
 </head>
 <body>
     <header>
-        <h1>Exemplo 1</h1>
+        <img src="imagens/avatarGenerico.jpg" alt="Genérico" class="imagem_inicial">
+        <h1 id="titulo">Exemplo 1</h1>
     </header>
     <section>
         <header>
-            <h2>Posts</h2>
+            <h2 class="subtitulo">Posts</h2>
         </header>
-        <article>
+        <article class="post">
             <header>
-                <h3>Post 1</h3>
+                <h3 class="titulo_post">Post 1</h3>
+                <img src="imagens/imagemHtml.jpg" alt="Generico 1" class="imagem_post">
             </header>
+            <p class="conteudo_post">
+                Lorem Ipsum is simply dummy text of the printing and 
+                typesetting industry. <a href="https://www.lipsum.com/" target="_blank">Lorem Ipsum</a>  
+                has been the industry's 
+                standard dummy text ever since the 1500s, when an unknown 
+                printer took a galley of type and scrambled it to make a 
+                type specimen book. It has survived not only five centuries, 
+                but also the leap into electronic typesetting, remaining 
+                essentially unchanged. It was popularised in the 1960s 
+                with the release of Letraset sheets containing Lorem Ipsum 
+                passages, and more recently with desktop publishing software 
+                like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
         </article>
     </section>
     <footer>
-        
+        <ul class="lista_contatos">
+            <li> <a href="mailto:reverdan@gmail.com" target="_blank">reverdan@gmail.com</a> </li>
+            <li> <a href="https://www.linkedin.com/feed/" target="_blank">Linkedin</a> </li>
+            <li> <a href="https://github.com/Reverdan" target="_blank">GitHub</a> </li>
+        </ul>
     </footer>
 </body>
 </html>
