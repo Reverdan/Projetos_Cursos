@@ -19,12 +19,25 @@
     align-items: center;
 }
 
-/* #inpValor
+input
 {
-
-} */
+    margin-bottom: 10px;
+}
 
 #btnExecutar
 {
-    height: ;
+    height: 30px;
+    width: 100px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+}
+
+#lblResultado
+{
+    font-size: 24px;
+    color: blue;
+    text-align: center;
 }
