@@ -9,18 +9,24 @@ document.getElementById("btnSubtrair").addEventListener("click", decrement);
 
 function atualizar()
 {
-    if (currentNumber >= 0)
-        currentNumberWrapper.style.color = "blue";
-    else
-        currentNumberWrapper.style.color = "red";
+    currentNumber >= 0 ? currentNumberWrapper.style.color = "blue" 
+    : currentNumberWrapper.style.color = "red";
+
+    // if (currentNumber >= 0)
+    //     currentNumberWrapper.style.color = "blue";
+    // else
+    //     currentNumberWrapper.style.color = "red";
+
     currentNumberWrapper.innerHTML = currentNumber;
 }
 
 function increment()
 {
     currentNumber++;
+
     if (currentNumber > 10)
         currentNumber = 10;
+
     atualizar();
 }
 
