@@ -8,6 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit
 {
   count: number = 0;
+  nome: string = 'Reverdan Almeida Sparinger';
+  text: string = '';
+  pessoas =[
+    {
+      nome: "Augusto",
+      sobrenome: "Soares"
+    },
+    {
+      nome: "José",
+      sobrenome: "Black"
+    },
+    {
+      nome: "Joaquim",
+      sobrenome: "Ourives"
+    }
+  ];
 
   constructor()
   {
@@ -16,6 +32,7 @@ export class AppComponent implements OnInit
 
   ngOnInit(): void 
   {
+    console.log(this.pessoas);
     let interval = setInterval(() => 
     {
       this.count++;
@@ -24,5 +41,9 @@ export class AppComponent implements OnInit
     }, 1000);
   }
 
-  
+  clicou(nome: string): void
+  {
+    this.text = nome;
+    console.log('Clicou em mim', nome);
+  }
 }
