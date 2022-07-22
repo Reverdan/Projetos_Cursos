@@ -1,0 +1,78 @@
+<h1 class="text-success text-center">Ambiente Angular</h1>
+
+<!-- Diretivas de Atributo -->
+<div 
+  [ngStyle]="{background: count < 5 ? 'red' : 'green'}"
+  [ngClass]="{custom: count > 5}"
+>
+  <h2 class="text-center">Contador : {{ count }}</h2>
+</div>
+
+<!-- Diretivas Estruturais -->
+
+<h2 *ngIf="count > 7; else menor">O contador passou de 7</h2>
+
+<ng-template #menor>
+  <h2>O contador é menor que 7</h2>
+</ng-template>
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-3">
+  <li 
+    class="list-group-item"
+    *ngSwitchCase="3"
+    >É igual a 3
+  </li>
+  <li 
+    class="list-group-item"
+    *ngSwitchCase="5"
+    >É igual a 5
+  </li>
+  <li 
+    class="list-group-item"
+    *ngSwitchCase="8"
+    >É igual a 8
+  </li>
+  <li 
+  class="list-group-item"
+  *ngSwitchDefault=""
+  >Esse é o default
+  </li>
+</ul>
+
+<ul class="list-group mx-auto col-3">
+  <li 
+    class="list-group-item"
+    *ngFor="let p of listPessoas">
+    O nome da pessoa é {{p.firstName}} {{p.lastName}} e idade {{p.age}}
+  </li>
+</ul>
+
+<div class="col-4 mx-auto my-3">
+  <h3 appMarcaTexto corDeFundo="red" corDoTexto="white">{{nome}}</h3>
+  <button class="btn btn-succes col-4 mx-auto" (click)="clicou('Ian')">Clique</button>
+</div>
+
+
+<div class="col-4 mx-auto">
+  <input 
+    type="text" 
+    class="form-control" 
+    placeholder="Digite alguma coisa"
+    [(ngModel)]="text">
+  <h4>Saída: {{text}}</h4>
+</div>
+
+<!-- <app-list-people></app-list-people> -->
+
+<div class="container my-5">
+  <div class="row d-flex align-items-center justify-content-center">
+    <h2 class="text-center">Listagem Rick and Morty</h2>
+    <div class="col-12">
+      <app-list-api></app-list-api>
+    </div>
+  </div>
+</div>
+
+
+
+
