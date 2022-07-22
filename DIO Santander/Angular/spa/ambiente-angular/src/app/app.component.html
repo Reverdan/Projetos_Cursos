@@ -42,8 +42,8 @@
 <ul class="list-group mx-auto col-3">
   <li 
     class="list-group-item"
-    *ngFor="let pessoa of pessoas">
-    O nome da pessoa é {{pessoa.nome}} {{pessoa.sobrenome}}
+    *ngFor="let p of listPessoas">
+    O nome da pessoa é {{p.firstName}} {{p.lastName}} e idade {{p.age}}
   </li>
 </ul>
 
@@ -61,4 +61,18 @@
     [(ngModel)]="text">
   <h4>Saída: {{text}}</h4>
 </div>
+
+<!-- <app-list-people></app-list-people> -->
+
+<div class="container my-5">
+  <div class="row d-flex align-items-center justify-content-center">
+    <h2 class="text-center">Listagem Rick and Morty</h2>
+    <div class="col-12">
+      <app-list-api></app-list-api>
+    </div>
+  </div>
+</div>
+
+
+
 
