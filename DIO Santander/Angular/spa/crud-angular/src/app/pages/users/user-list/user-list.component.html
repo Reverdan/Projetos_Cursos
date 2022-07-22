@@ -13,11 +13,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Rever</td>
-                    <td>52</td>
-                    <td>Des</td>
+                <tr *ngFor="let user of users">
+                    <td>{{user.id}}</td>
+                    <td>{{user.nome}} {{user.sobrenome}}</td>
+                    <td>{{user.idade}}</td>
+                    <td>{{user.profissao}}</td>
                     <td>
                         <button class="btn btn-primary">Editar</button>
                     </td>
